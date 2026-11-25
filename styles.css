@@ -1,0 +1,532 @@
+
+/* COLORES PRINCIPALES */
+
+:root {
+    --azul: #071b33;
+    --azul-claro: #102e4c;
+    --dorado: #f5cf54;
+    --turquesa: #48dbe8;
+    --blanco: #ffffff;
+    --gris: #b9c9d9;
+}
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--azul);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+section {
+    padding: 60px 6%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* ENCABEZADO */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px 6%;
+    background: #051426;
+    border-bottom: 2px solid var(--dorado);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--dorado);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+        ellipse at top,
+        #1c456b,
+        #071b33 75%
+    );
+}
+
+.delegacion {
+    color: var(--turquesa);
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 100px);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--dorado);
+}
+
+.hero p {
+    font-size: 19px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: var(--dorado);
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* INTEGRANTES */
+
+.representantes {
+    background: #0b223b;
+}
+
+.candidatos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.candidato {
+    width: 280px;
+    max-width: 100%;
+    padding: 25px;
+    background: var(--azul-claro);
+    border: 1px solid #294760;
+    border-radius: 18px;
+}
+
+.candidato img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
+    border: 4px solid var(--dorado);
+    background: white;
+    margin-bottom: 18px;
+}
+
+.candidato h3 {
+    font-size: 20px;
+}
+
+.candidato p {
+    color: var(--dorado);
+    margin-top: 5px;
+}
+
+/* SIETE EJES INTERACTIVOS */
+
+.propuestas {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.propuestas > p {
+    color: var(--gris);
+}
+
+.circulos {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    margin: 40px auto;
+}
+
+.eje {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.5);
+    font-size: 40px;
+    color: white;
+    transition: transform 0.25s,
+                border-color 0.25s;
+}
+
+.eje:hover .circulo,
+.eje.activo .circulo {
+    transform: translateY(-5px);
+    border-color: var(--dorado);
+}
+
+.eje.activo {
+    color: var(--dorado);
+}
+
+.eje:focus-visible {
+    outline: 2px solid var(--dorado);
+    outline-offset: 5px;
+}
+
+.verde {
+    background: #08734b;
+}
+
+.azul {
+    background: #0865ad;
+}
+
+.morado {
+    background: #852b9d;
+}
+
+.naranja {
+    background: #db8b09;
+}
+
+.turquesa {
+    background: #00899c;
+}
+
+/* PANEL DE INFORMACIÓN */
+
+#detalle-propuesta {
+    max-width: 850px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: var(--azul-claro);
+    border: 1px solid #315471;
+    border-left: 4px solid var(--turquesa);
+    border-radius: 14px;
+    text-align: left;
+}
+
+#titulo-propuesta {
+    color: var(--turquesa);
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+#contenido-propuesta {
+    color: #e5edf5;
+}
+
+#contenido-propuesta ul {
+    padding-left: 22px;
+}
+
+#contenido-propuesta li {
+    margin-bottom: 12px;
+}
+
+/* JORNADA ELECTORAL */
+
+.jornada {
+    background: var(--azul-claro);
+    border-top: 1px solid #294760;
+    border-bottom: 1px solid #294760;
+}
+
+.fecha {
+    color: var(--dorado);
+    font-size: clamp(25px, 5vw, 40px);
+    font-weight: 800;
+}
+
+/* GALERÍA */
+
+#imagenes-galeria {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(220px, 1fr)
+    );
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#imagenes-galeria img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: #051426;
+    color: var(--gris);
+    font-size: 13px;
+    border-top: 2px solid var(--dorado);
+}
+
+/* ADAPTACIÓN A TABLETAS */
+
+@media (max-width: 1050px) {
+
+    .circulos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .hero {
+        min-height: 340px;
+    }
+
+    .delegacion {
+        font-size: 11px !important;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .circulos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px 10px;
+    }
+
+    .circulo {
+        width: 72px;
+        height: 72px;
+        font-size: 30px;
+    }
+
+    .eje {
+        font-size: 12px;
+    }
+
+    .candidatos {
+        gap: 12px;
+    }
+
+    .candidato {
+        width: calc(50% - 6px);
+        padding: 15px 8px;
+    }
+
+    .candidato img {
+        width: 110px;
+        height: 110px;
+        max-width: 100%;
+    }
+
+    .candidato h3 {
+        font-size: 15px;
+    }
+
+    #detalle-propuesta {
+        padding: 20px;
+    }
+
+    #titulo-propuesta {
+        font-size: 21px;
+    }
+
+}
+/* TARJETAS DE LOS CANDIDATOS */
+
+.tarjetas-integrantes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 25px;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.tarjeta-integrante {
+    background: #123968;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    min-width: 0;
+}
+
+.tarjeta-integrante img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.tarjeta-integrante .cargo {
+    display: block;
+    color: #f5d35b;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-integrante h3 {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0 18px;
+}
+
+/* BOTÓN CONOCER MÁS */
+
+.semblanza summary {
+    background: #f5d35b;
+    color: #09264e;
+    padding: 13px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: background 0.3s;
+}
+
+.semblanza summary::-webkit-details-marker {
+    display: none;
+}
+
+.semblanza summary::after {
+    content: " ﹀";
+}
+
+.semblanza[open] summary::after {
+    content: " ﹇";
+}
+
+.semblanza summary:hover {
+    background: #ffe58a;
+}
+
+.semblanza p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+    margin: 18px 0 0;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+    .tarjetas-integrantes {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    .tarjeta-integrante img {
+        height: 260px;
+    }
+}/* Ajuste de fotografías de los candidatos */
+
+#representantes img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    display: block;
+    box-sizing: border-box;
+    padding: 12px 25px 0;
+    background-color: #ffffff;
+}/* Ajuste individual Enrique */
+
+#representantes img[src*="enrique"] {
+    object-position: center 12%;
+    padding: 12px 45px 0;
+}
