@@ -4,201 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Información de Fórmula 2, Delegación CAR Centro Oriente.">
-    <title>Fórmula 2 | CAR Centro Oriente</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Fórmula 2 | Gracias</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #061b40, #124b98);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .contenedor {
+            max-width: 650px;
+            animation: entrada 1.5s ease;
+        }
+
+        .formula {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 8px;
+        }
+
+        .numero {
+            font-size: 110px;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .linea {
+            width: 65px;
+            height: 3px;
+            background: #73b8ff;
+            margin: 25px auto;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #dce9ff;
+        }
+
+        .estado {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            border: 1px solid #ffffff40;
+            background: #ffffff12;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #b8d6ff;
+        }
+
+        @keyframes entrada {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <main class="contenedor">
 
-    <header class="header">
-        <div class="logo">FÓRMULA <span>2</span></div>
+        <div class="formula">FÓRMULA</div>
+        <div class="numero">2</div>
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#propuestas">Propuestas</a>
-            <a href="#representantes">Integrantes</a>
-            <a href="#galeria">Galería</a>
-            <a href="#buzon">Buzón</a>
-        </nav>
-    </header>
+        <div class="linea"></div>
 
-    <main>
+        <h1>Gracias por ser parte de este proyecto</h1>
 
-        <section id="inicio" class="hero">
-            <p class="delegacion">
-                DELEGACIÓN CAR CENTRO ORIENTE
-            </p>
+        <p>Nuestro periodo de campaña ha concluido.</p>
 
-            <h1>FÓRMULA <span>2</span></h1>
+        <p>
+            Agradecemos a todos nuestros compañeros
+            por su tiempo, participación y confianza.
+        </p>
 
-            <p>Información y propuestas</p>
+        <div class="estado">
+            Sitio temporalmente inactivo
+        </div>
 
-            <a href="#propuestas" class="btn">
-                Consultar propuestas
-            </a>
-        </section>
-
-        <<section id="representantes" class="representantes">
-
-    <h2>Conoce a los candidatos</h2>
-
-    <div class="tarjetas-integrantes">
-
-        <article class="tarjeta-integrante">
-
-            <img src="img/enrique.png" alt="Enrique Ordóñez Blanco">
-
-            <span class="cargo">TITULAR</span>
-
-            <h3>Enrique Ordóñez Blanco</h3>
-
-            <details class="semblanza">
-
-                <summary>Conocer más</summary>
-
-                <p>
-                    Soy Enrique Ordóñez, cuento con más de 13 años de experiencia desempeñándome como Ejecutivo de Atención en el CAR, una labor que realizo día a día con gran dedicación y compromiso.
-                </p>
-
-                <p>
-                    Disfruto ayudar a los demás, poniendo mi experiencia y conocimientos al servicio de cada persona que lo necesite. Me caracterizo por ser un profesional trabajador, responsable y altamente dedicado, enfocando siempre mi máximo esfuerzo en brindar soluciones eficaces y alcanzar los objetivos planteados.
-                </p>
-
-            </details>
-
-        </article>
-
-        <article class="tarjeta-integrante">
-
-            <img src="img/orlando.png" alt="Orlando Delgado Sosa">
-
-            <span class="cargo">SUPLENTE</span>
-
-            <h3>Orlando Delgado Sosa</h3>
-
-            <details class="semblanza">
-
-                <summary>Conocer más</summary>
-
-                <p>
-                    Soy Orlando Delgado Sosa, cuento con más de 14 años de experiencia desempeñándome como ejecutivo en nuestro centro de trabajo.
-                </p>
-
-                <p>
-                    A lo largo de este tiempo siempre he estado comprometido con mis funciones, he tenido la oportunidad de compartir experiencias con muchos de ustedes, quienes me conocen saben que soy una persona responsable, empática y comprometida con el trabajo, siempre dispuesto a aportar lo mejor de mí.
-                </p>
-
-                <p>
-                    Quiero trabajar de la mano de ustedes y con ustedes encabezando el cambio que queremos para nuestro centro de trabajo.
-                </p>
-
-                <p>
-                    Este 27 de noviembre, vota fórmula 2.
-                </p>
-
-            </details>
-
-        </article>
-
-    </div>
-
-</section>
-
-        <section id="propuestas" class="propuestas">
-
-            <h2>Nuestras propuestas</h2>
-
-            <p>Selecciona una propuesta para conocer sus detalles.</p>
-
-            <div class="circulos">
-
-                <button class="eje" data-eje="0">
-                    <span class="circulo verde">⚖</span>
-                    <span>Justicia y transparencia</span>
-                </button>
-
-                <button class="eje" data-eje="1">
-                    <span class="circulo azul">✚</span>
-                    <span>Salud y condiciones dignas</span>
-                </button>
-
-                <button class="eje" data-eje="2">
-                    <span class="circulo morado">♡</span>
-                    <span>Bienestar emocional</span>
-                </button>
-
-                <button class="eje" data-eje="3">
-                    <span class="circulo naranja">📖</span>
-                    <span>Capacitación y defensa</span>
-                </button>
-
-                <button class="eje" data-eje="4">
-                    <span class="circulo turquesa">♧</span>
-                    <span>Representación cercana</span>
-                </button>
-
-                <button class="eje" data-eje="5">
-                    <span class="circulo verde">⌂</span>
-                    <span>Unidad y bienestar familiar</span>
-                </button>
-
-                <button class="eje" data-eje="6">
-                    <span class="circulo azul">☷</span>
-                    <span>Rendición de cuentas</span>
-                </button>
-
-            </div>
-
-            <div id="detalle-propuesta" hidden>
-                <h3 id="titulo-propuesta"></h3>
-                <div id="contenido-propuesta"></div>
-            </div>
-
-        </section>
-
-        <section class="jornada">
-          <h2>Este 27 de noviembre</h2>
-
-<p class="mensaje-voto">
-    VOTA FÓRMULA 2
-    <span class="palomita">✕</span>
-</p>
-</section>
-        <section id="galeria" class="galeria">
-            <h2>Material informativo</h2>
-            <div id="imagenes-galeria"></div>
-        </section>
-
-<section id="buzon" class="buzon">
-    <h2>Buzón de propuestas</h2>
-    <h3>¡Tu voz cuenta!</h3>
-
-    <p>
-        Comparte tus propuestas, inquietudes y sugerencias.
-        Queremos escucharte.
-    </p>
-
-    <a href="https://forms.gle/KJF4PvcgKB1TACg98"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="btn-buzon">
-        Enviar mi propuesta
-    </a>
-
-    <p class="buzon-privacidad">
-        🔒 Tu participación puede ser anónima.
-    </p>
-</section>
+        <footer>FÓRMULA 2 | NOVIEMBRE 2026</footer>
 
     </main>
-
-    <footer>
-        <p>Fórmula 2 | CAR Centro Oriente</p>
-        <p>2026</p>
-    </footer>
-
-    <script src="script.js"></script>
-
 </body>
 </html>
